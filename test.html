@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Visualization Tool </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="landing.html">Latitude</a>
+          </div>
+    
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="maxtemp.html">Max Temperature </span></a></li>
+                  <li ><a href="humidity.html">Humidity</a></li>
+                  <li><a href="cloudiness.html">Cloudiness </a></li>
+                  <li class="active"><a href="wind.html">Windspeed <span class="sr-only">(current)</a></li>
+                </ul>
+                <li><a href="compare.html">Comparison </a></li>
+                <li><a href="data.html">Data</a></li>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav> 
+
+    <div class="container">
+            <div class="row row-grid">
+                <div class="col-md-8">
+                    <div class="box box-left">
+                        <section id="intro">
+                            <h1>Wind Speed</h1>
+                            <hr>
+                            <div class="imgAbt">
+                                <a target="_blank" href="Fig4.png">
+                                    <img id="viz-main" src="Fig4.png" alt="Latitude vs wind speed"  >
+                                </a>
+                            </div>
+    
+                            <section id="summary">
+                                <p>In regards to wind speed, there seems to not be any direct correlation between 
+                                    windspeed and latitude. This suggest that the windspeed that different regions experience
+                                    is something that is not caused by latitude. Further study is advised.
+                                </p>
+    
+                            </section>
+    
+                        </section>
+                    </div>
+                </div>
+    
+    
+                <div class="col-md-4">
+                    <div class="box box-right">
+                        <h2>Visualizations</h2>
+                        <hr>
+    
+    
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-3 col-md-6">
+                                <figure>
+                                    <a href="maxtemp.html">
+                                        <img  width="220" height="220" id="landing-viz" src="Fig1.png" alt="Latitude vs. Max Temperature">
+                                    </a>
+                                </figure>
+                            </div>
+    
+                            <div class="col-xs-6 col-sm-3 col-md-6">
+                                <figure>
+                                    <a href="humidity.html">
+                                        <img  width="220" height="220" id="landing-viz" src="Fig2.png" alt="Latitude vs. Humidity">
+                                    </a>
+                                </figure>
+                            </div>
+    
+                            <div class="col-xs-6 col-sm-3 col-md-6">
+                                <figure>
+                                    <a href="cloudiness.html">
+                                        <img  width="220" height="220" id="landing-viz" src="Fig3.png" alt="Latitude vs. Cloudiness">
+                                    </a>
+                                </figure>
+                            </div>
+    
+                            <div class="col-xs-6 col-sm-3 col-md-6">
+                                <figure>
+                                    <a href="wind.html">
+                                        <img  width="220" height="220" id="landing-viz" src="Fig4.png" alt="Latitude vs. Wind Speed">
+                                    </a>
+                                </figure>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+       </div>
+   </div>
+   
+   
+</body>
+
+</html>

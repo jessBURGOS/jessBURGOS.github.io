@@ -1,0 +1,7 @@
+  h1, h2 {
+    color: #32bdcc;
+  }
+  .navbar-default .navbar-brand{
+    background-color: #32bdcc;
+    color: white
+  }
