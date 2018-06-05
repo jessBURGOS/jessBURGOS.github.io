@@ -1,0 +1,13 @@
+body { background-color: transparent; }
+.form-group{float:left; background: silver;}
+.table {color: white;}
+
+html { 
+background: url(ufo.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+

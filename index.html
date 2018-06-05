@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UFO's Are REAL</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box-left">
+      <div class="col-md-4">
+        <div class="form-group">
+          Enter a Date
+          <br>
+          <input type="text" class="form-control" id="datetime" placeholder="M/DD/YYYY">
+          <br>
+          Enter a City
+          <br>
+          <input type="text" class="form-control" id="city" placeholder="City">
+          <br>
+          Enter a State
+          <br>
+          <input type="text" class="form-control" id="state" placeholder="State">
+          <br>
+          Select a Country
+          <br>
+          <select id="country">
+            <option value="ca">CA</option>
+            <option value="us">US</option>
+          </select>
+          <br>
+          Select a Shape
+          <br>
+          <select id="shape">
+            <option value="all">All</option>
+            <option value="chevron">Chevron</option>
+            <option value="cigar">Cigar</option>
+            <option value="circle">Circle</option>
+            <option value="cross">Cross</option>
+            <option value="cylinder">cylinder</option>
+            <option value="disk">Disk</option>
+            <option value="fireball">Fireball</option>
+            <option value="formation">Formation</option>
+            <option value="light">Light</option>
+            <option value="oval">Oval</option>
+            <option value="other">Other</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="sphere">Sphere</option>
+            <option value="teardrop">Teardrop</option>
+            <option value="triangle">Triangle</option>
+            <option value="unknown">Unknown</option>
+          </select>
+          <br>
+          Results Per Page
+          <br>
+          <select id="page">
+            <option value=100>100</option>
+            <option value=200>200</option>
+            <option value="all">ALL</option>
+          </select>
+          <br>
+          <a id="search" class="btn btn-success">Update Search</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Country</th>
+              <th>Shape</th>
+              <th>Duration(Minutes)</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="data.js" type="text/javascript"></script>
+  <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>
