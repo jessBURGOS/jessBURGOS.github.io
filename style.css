@@ -8,9 +8,11 @@
     width: 100% !important;
   }
   #map {
+  height: 20%;
+}
+html, body, #map-cont {
   height: 100%;
 }
-
   .topfive {
     float: right;
   }
