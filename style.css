@@ -5,14 +5,12 @@
   }
   
   .mappy {
-    width: 100% !important;
+    width: 30% !important;
   }
   #map {
-  height: 20%;
+  height: 30%;
 }
-html, body, #map-cont {
-  height: 100%;
-}
+
   .topfive {
     float: right;
   }
