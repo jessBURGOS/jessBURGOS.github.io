@@ -7,9 +7,13 @@
   .mappy {
     width: 30% !important;
   }
-  #map {
-  height: 30%;
-}
+  
+  #map{
+    height: 50%;
+    width: 40%;
+    top: 200px;
+    
+  }
 
   .topfive {
     float: right;
