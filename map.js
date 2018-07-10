@@ -101,7 +101,7 @@ function drawMap() {
                     map.fitBounds(event.target.getBounds());
                 }
             });
-            layer.bindPopup("<h2>" + feature.properties.county + "</h2>" + "<hr>"+"<h2>" + "$" +myObject.jsonTwo[0][0]["1996-04"]+ "</h2>" );
+            layer.bindPopup("<h2>" + feature.properties.county + "</h2>" );
         }
         }).addTo(map);
   
@@ -141,3 +141,4 @@ function drawMap() {
 }
 
 drawMap()
+// + "<hr>"+"<h2>" + "$" +myObject.jsonTwo[0][0]["1996-04"]+ "</h2>"
