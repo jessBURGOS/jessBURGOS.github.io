@@ -7,6 +7,11 @@ var dd_value = d3.select("#date-selector").node().value;
 
 console.log(dd_value);
 
+var map = L.map("map", {
+    center: [37.752361, -122.080389],
+    zoom: 7
+  });
+var legend = L.control({ position: "bottomright" });
 document.getElementById("date-selector").addEventListener("change", function() {
     dd_value = d3.select("#date-selector").node().value;
     console.log(dd_value);
@@ -16,10 +21,7 @@ document.getElementById("date-selector").addEventListener("change", function() {
 //Mapping piece
 function drawMap() {
     console.log("running")
-    var map = L.map("map", {
-    center: [37.752361, -122.080389],
-    zoom: 9
-  });
+    ;
   
   // Adding tile layer
   L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?" +
@@ -42,7 +44,7 @@ function drawMap() {
   
   d3.json("https://cors-anywhere.herokuapp.com/" + "ucb-dbc-project2.herokuapp.com/county_single_family").then(function(data) {
     var anotherObject = data;
-    // debugger;
+
     anotherObject = Object.values(anotherObject).sort((a, b) => {
         var nameA = a.RegionName.toUpperCase();
         var nameB = b.RegionName.toUpperCase();
@@ -101,14 +103,14 @@ function drawMap() {
                     map.fitBounds(event.target.getBounds());
                 }
             });
-            layer.bindPopup("<h2>" + feature.properties.county + "</h2>" );
+            layer.bindPopup("<h2>" + feature.properties.county + "</h2>"  );
         }
         }).addTo(map);
   
     console.log(geoJson)
   
     // Setting up the legend
-    var legend = L.control({ position: "bottomright" });
+   
     legend.onAdd = function() {
       var div = L.DomUtil.create("div", "info legend");
       var limits = geoJson.options.limits;
@@ -116,7 +118,7 @@ function drawMap() {
       var labels = [];
   
       // Add min & max
-      var legendInfo = "<h1>Median Home Prices</h1>" +
+      var legendInfo = "<h1>Average Home Prices</h1>" +
         "<div class=\"labels\">" +
           "<div class=\"min\">" +"$"+ limits[0] + "</div>" +
           "<div class=\"max\">" +"$"+  limits[limits.length - 1] + "</div>" +
@@ -141,4 +143,3 @@ function drawMap() {
 }
 
 drawMap()
-// + "<hr>"+"<h2>" + "$" +myObject.jsonTwo[0][0]["1996-04"]+ "</h2>"
